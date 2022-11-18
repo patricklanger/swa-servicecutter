@@ -33,6 +33,7 @@ Kunden, Geräte, Preisangebot und Bewertung teilen sich keinen Lebenszyklus.
 - Gerät kann vor einem Preisangebot bestehen
 - Bewertung ist unabhängig von allem. Es soll glaub ich ein Bewertungskriterium darstellen. ?
 
+---
 
 ### Semantic Proximity
 
@@ -45,6 +46,7 @@ Nanoentitäten von:
 - Preisangebot und Bewertung oder
 - Kunde und Gerät
 
+---
 
 ### Shared Owner
 
@@ -55,6 +57,7 @@ Personen, Rollen, Organisationseinheiten sind für eine Gruppe von Nanoentitäte
 - Vielleicht pflegt eine Gruppe Gerätetypen und erstellt entsprechende Bewertungskrterien. Diese Gruppe spielt bestimmt auch bei der Angebotserstellung mit.
 - Dann gibt es noch eine Gruppe, die Kunden verwaltet und die Zahlungen veranlasst, wenn ein Angebot angenommen wurde.
 
+---
 
 ### Structural Volatility
 
@@ -64,6 +67,7 @@ Wie oft change requests implementiert werden, die die Nanoentitäten beeinflusse
 #### Bewertung
 keine Ahnung was wohl oft angefasst wird. Vllt der Preisbildungsalgorithmus?
 
+---
 
 ### Latency
 
@@ -73,6 +77,7 @@ High performance Nanoentities..
 #### Bewertung
 Produktsuche, wenn der Kunde nach dem entsprechenden gerät sucht. Die Preisberechnung kann ruhig länger dauern.
 
+---
 
 ### Consistency Criticality
 
@@ -82,12 +87,14 @@ Wie kritisch ist es das Daten konsistent sind?
 #### Bewertung
 Preisangebote und sämtliche Zahlungsangelegenheiten sollten unbedingt konsistent sein.
 
+---
 
 ### Availability Criticality
 
 #### Bewertung
 Selbes wie bei Latency. (Produktsuche, wenn der Kunde nach dem entsprechenden gerät sucht. Die Preisberechnung kann ruhig länger dauern.)
 
+---
 
 ### Content Volatility
 
@@ -100,6 +107,7 @@ Nanoentities die sich häufig ändern und solche die sich nur selten ändern, so
 - Preisangebote & Geräte häufiger
 - Wenn preisangebote nach einer gewissen Zeit verfallen oder geblockt werden oder sich ändern, oft
 
+---
 
 ### Consistency Constraint
 
@@ -109,6 +117,7 @@ Eine Gruppe von Nanoentities soll konsistent mit einander sein.
 #### Bewertung
 - Presiangebot und Rechnungsbetrag
 
+---
 
 ### Storage Similarity
 
@@ -118,6 +127,7 @@ Für einige Nanoentitäten wird uU viel mehr speicherplatz benötigt. (Nicht sic
 #### Bewertung
 Sieht alles eher nach geringem Speicherbedarf aus. Ggf Kundenbilder, die zu den eingestellten Produkten gehören nehmen viel Speicherbedarf.
 
+---
 
 ### Predefined Service Constraint
 
@@ -127,6 +137,7 @@ Einige Nanoentitäten sollten ggf unbedingt in einem bestimmten Service liegen. 
 #### Bewertung
 nope
 
+---
 
 ### Security Contextuality
 
@@ -138,6 +149,7 @@ zB
 - Kundendaten, Rechnungsdetails
 - Bewertungskreíterien und Angbotserstellung
 
+---
 
 ### Security Criticality
 
@@ -149,6 +161,7 @@ Wie daramtisch ist der Datenverlust einer Gruppe von Nanoentities?
 - Kundendaten, Rechnungsdaten, Preisangebote: wichtig.
 - Produktbilder: eher unwichtig
 
+---
 
 ### Security Constraint
 
