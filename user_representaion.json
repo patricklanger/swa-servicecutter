@@ -1,0 +1,21 @@
+{
+  "useCases": [
+    {
+      "name": "CreatePreisangebot",
+      "nanoentitiesRead": [
+        "kunde.kundenId",
+        "geraet.geraeteId",
+        "geraet.typ"
+      ],
+      "nanoentitiesWritten": [
+        "Preisangebot.preis",
+        "geraet.geraeteId"
+      ]
+    }
+  ],
+  "compatibilities": {
+    
+  },
+  "sharedOwnerGroups": [
+  ]
+}

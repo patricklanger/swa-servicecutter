@@ -1,0 +1,52 @@
+{
+    "name": "Recycling company",
+    "entities": [
+        {
+            "name": "Kunde",
+            "nanoentities": [
+                "kundenId",
+                "name",
+                "adresse"
+            ]
+        },
+        {
+            "name": "Geraet",
+            "nanoentities": [
+                "geraeteId",
+                "typ",
+                "zustand"
+            ]
+        },
+        {
+            "name": "Preisangebot",
+            "nanoentities": [
+                "preisangebotsId",
+                "preis"
+            ]
+        },
+        {
+            "name": "Bewertung",
+            "nanoentities": [
+                "bewertungsId",
+                "beschreibung"
+            ]
+        }
+    ],
+    "relations": [
+        {
+            "origin": "Kunde",
+            "destination": "Geraet",
+            "type": "AGGREGATION"
+        },
+        {
+            "origin": "Geraet",
+            "destination": "Preisangebot",
+            "type": "AGGREGATION"
+        },
+        {
+            "origin": "Geraet",
+            "destination": "Bewertung",
+            "type": "AGGREGATION"
+        }
+    ]
+}
