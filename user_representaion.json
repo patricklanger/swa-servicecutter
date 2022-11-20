@@ -1,21 +1,148 @@
 {
   "useCases": [
     {
+      "name": "CreateKunde",
+      "nanoentitiesRead": [
+      ],
+      "nanoentitiesWritten": [
+        "kunde.kundenId",
+        "kunde.name",
+        "kunde.adresse"
+      ]
+    },
+    {
+      "name": "CreateAnfrage",
+      "nanoentitiesRead": [
+        "kunde.kundenId"
+      ],
+      "nanoentitiesWritten": [
+        "geraet.geraeteId",
+        "geraet.typ",
+        "geraet.sollZustand"
+      ]
+    },
+    {
       "name": "CreatePreisangebot",
       "nanoentitiesRead": [
         "kunde.kundenId",
         "geraet.geraeteId",
-        "geraet.typ"
+        "geraet.typ",
+        "geraet.sollZustand"
       ],
       "nanoentitiesWritten": [
-        "Preisangebot.preis",
-        "geraet.geraeteId"
+        "preisangebot.preis",
+        "preisangebot.preisangebotsId",
+        "preisangebot.status",
+        "bewertung.bewertungsId",
+        "bewertung.bewertung"
+      ]
+    },
+    {
+      "name": "UpdatePreisangebot",
+      "nanoentitiesRead": [
+        "kunde.kundenId",
+        "geraet.geraeteId",
+        "geraet.typ",
+        "geraet.istZustand"
+      ],
+      "nanoentitiesWritten": [
+        "preisangebot.preis",
+        "preisangebot.status",
+        "bewertung.bewertungsId",
+        "bewertung.bewertung"
+      ]
+    },
+    {
+      "name": "AcceptPreisangebot",
+      "nanoentitiesRead": [
+        "kunde.kundenId",
+        "geraet.geraeteId",
+        "preisangebot.preisangebotsId"
+      ],
+      "nanoentitiesWritten": [
+        "geraet.eigentuemer",
+        "preisangebot.status",
+        "rechnung.rechnungsId",
+        "rechnung.betrag",
+        "rechnung.datum"
+      ]
+    },
+    {
+      "name": "DeclinePreisangebot",
+      "nanoentitiesRead": [
+        "kunde.kundenId",
+        "geraet.geraeteId",
+        "preisangebot.preisangebotsId"
+      ],
+      "nanoentitiesWritten": [
+        "preisangebot.status"
+      ]
+    },
+    {
+      "name": "CreateGeraetetyp",
+      "nanoentitiesRead": [
+      ],
+      "nanoentitiesWritten": [
+        "geraetetyp.name",
+        "geraetetyp.bewertungskriterien"
       ]
     }
   ],
+  "sharedOwnerGroups": [],
   "compatibilities": {
+    "contentVolatility":
+			[
+				{
+					"characteristic":"Often",
+					"nanoentities":[]
+					
+				},
+				{
+					"characteristic":"Rarely",
+					"nanoentities":[]
+				}
+			],
+		"structuralVolatility":
+			[	
+				{
+					"characteristic":"Often",
+					"nanoentities":[]
+				}
+			],
+		"availabilityCriticality":
+			[
+				{
+					"characteristic":"Low",
+					"nanoentities":[]
+				}
+			],
+		"consistencyCriticality":
+			[
+				{
+					"characteristic":"Eventually",
+					"nanoentities":[]
+				}
+			],
+		"storageSimilarity":
+			[
+				{
+					"characteristic":"Huge",
+					"nanoentities":[]
+					
+				}
+			],
+		"securityCriticality": 
+			[
+				{
+					"characteristic":"Public",
+					"nanoentities":[]
+				},
+				{
+					"characteristic":"Critical",
+					"nanoentities":[]
+					
+				}
+			]
     
-  },
-  "sharedOwnerGroups": [
-  ]
+  }
 }

@@ -7,18 +7,30 @@
 Recycleing Company
 
 
+## ERM
+
+![ERM](./swa_servicecutter_bausteinsicht.drawio.png)
+
+
 ## Entities
 
 - Kunde
 - Geraet
 - Preisangebot
 - Bewertung
+- Geraetetyp
+- Rechnung
 
 
 ## UseCases
 
+- Kunden anlegen
 - Angebot wird erstellt
-- ....
+- Preisangebot nach Kundenangaben erstellen (CreatePreaisangebot)
+- Preisangebot nach begutachtung updaten (UpdatePreisangebot)
+- Preaiangebot wird angenommen
+- Preisangebot wird abgelehnt
+- Gerätetyp wird erstellt
 
 ## Auswahl der Kriterien
 
@@ -26,6 +38,7 @@ Gewichtung wird von 0-10 vergeben. Je nach Kriterium unterscheiden sich aber die
 
 
 ### Identity & Lifecycle Commonality
+- Ergibt sich das aus dem ERM?
 
 #### Bewertung
 Kunden, Geräte, Preisangebot und Bewertung teilen sich keinen Lebenszyklus.
@@ -36,6 +49,7 @@ Kunden, Geräte, Preisangebot und Bewertung teilen sich keinen Lebenszyklus.
 ---
 
 ### Semantic Proximity
+- Ergibt sich das aus den Usecases?
 
 #### Bedeutung
 Zwei Nanoentitäten sind bespielsweise semantic proximated, wenn in einem Usecase auf beide zugegriffen wird.
