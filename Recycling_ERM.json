@@ -12,8 +12,9 @@
         {
             "name": "Geraet",
             "nanoentities": [
-                "Kunde.kundenId",
+                "kundenId",
                 "geraeteId",
+                "geraetetypId",
                 "sollZustand",
                 "istZustand",
                 "eingangsdatum",
@@ -23,8 +24,9 @@
         {
             "name": "Preisangebot",
             "nanoentities": [
-                "Bewertung.bewertungsId",
-                "Geraet.geraeteId",
+                "kundenId",
+                "bewertungsId",
+                "geraeteId",
                 "preisangebotsId",
                 "preis",
                 "status"
@@ -40,9 +42,9 @@
         {
             "name": "Rechnung",
             "nanoentities": [
-                "Preisangebot.preisangebotsId",
-                "Kunde.kundenId",
-                "Geraet.geraeteId",
+                "preisangebotsId",
+                "kundenId",
+                "geraeteId",
                 "rechnungsId",
                 "betrag",
                 "datum"
@@ -51,6 +53,7 @@
         {
             "name": "Geraetetyp",
             "nanoentities": [
+                "geraetetypId",
                 "name",
                 "bewertungskriterien"
             ]
@@ -61,6 +64,11 @@
             "origin": "Geraet",
             "destination": "Geraetetyp",
             "type": "AGGREGATION"
+        },
+        {
+            "origin": "Preisangebot",
+            "destination": "Bewertung",
+            "type": "COMPOSITION"
         }
     ]
 }

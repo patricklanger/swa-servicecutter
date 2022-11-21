@@ -16,8 +16,11 @@
         "Kunde.kundenId"
       ],
       "nanoentitiesWritten": [
+        "Geraet.kundenId",
         "Geraet.geraeteId",
-        "Geraet.sollZustand"
+        "Geraet.sollZustand",
+        "Geraet.eigentuemer",
+        "Geraet.geraetetypId"
       ]
     },
     {
@@ -26,6 +29,7 @@
         "Kunde.kundenId",
         "Geraet.geraeteId",
         "Geraet.sollZustand",
+        "Geraet.geraetetypId",
         "Geraetetyp.name",
         "Geraetetyp.bewertungskriterien"
       ],
@@ -33,19 +37,27 @@
         "Preisangebot.preis",
         "Preisangebot.preisangebotsId",
         "Preisangebot.status",
-        "Bewertung.bewertungsId"
+        "Preisangebot.bewertungsId",
+        "Preisangebot.geraeteId",
+        "Preisangebot.kundenId",
+        "Bewertung.bewertungsId",
+        "Bewertung.bewertung"
       ]
     },
     {
       "name": "UpdatePreisangebot",
       "nanoentitiesRead": [
-        "Kunde.kundenId",
-        "Geraet.geraeteId",
-        "Geraet.istZustand"
+        "Preisangebot.preis",
+        "Preisangebot.preisangebotsId",
+        "Preisangebot.status",
+        "Preisangebot.bewertungsId",
+        "Preisangebot.geraeteId",
+        "Preisangebot.kundenId"
       ],
       "nanoentitiesWritten": [
         "Preisangebot.preis",
-        "Preisangebot.status"
+        "Preisangebot.status",
+        "Bewertung.bewertung"
       ]
     },
     {
@@ -58,6 +70,9 @@
       "nanoentitiesWritten": [
         "Geraet.eigentuemer",
         "Preisangebot.status",
+        "Rechnung.kundenId",
+        "Rechnung.preisangebotsId",
+        "Rechnung.geraeteId",
         "Rechnung.rechnungsId",
         "Rechnung.betrag",
         "Rechnung.datum"
@@ -79,6 +94,7 @@
       "nanoentitiesRead": [
       ],
       "nanoentitiesWritten": [
+        "Geraetetyp.geraetetypId",
         "Geraetetyp.name",
         "Geraetetyp.bewertungskriterien"
       ]
