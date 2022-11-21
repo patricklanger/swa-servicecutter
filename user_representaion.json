@@ -5,77 +5,73 @@
       "nanoentitiesRead": [
       ],
       "nanoentitiesWritten": [
-        "kunde.kundenId",
-        "kunde.name",
-        "kunde.adresse"
+        "Kunde.kundenId",
+        "Kunde.name",
+        "Kunde.adresse"
       ]
     },
     {
       "name": "CreateAnfrage",
       "nanoentitiesRead": [
-        "kunde.kundenId"
+        "Kunde.kundenId"
       ],
       "nanoentitiesWritten": [
-        "geraet.geraeteId",
-        "geraet.typ",
-        "geraet.sollZustand"
+        "Geraet.geraeteId",
+        "Geraet.sollZustand"
       ]
     },
     {
       "name": "CreatePreisangebot",
       "nanoentitiesRead": [
-        "kunde.kundenId",
-        "geraet.geraeteId",
-        "geraet.typ",
-        "geraet.sollZustand"
+        "Kunde.kundenId",
+        "Geraet.geraeteId",
+        "Geraet.sollZustand",
+        "Geraetetyp.name",
+        "Geraetetyp.bewertungskriterien"
       ],
       "nanoentitiesWritten": [
-        "preisangebot.preis",
-        "preisangebot.preisangebotsId",
-        "preisangebot.status",
-        "bewertung.bewertungsId",
-        "bewertung.bewertung"
+        "Preisangebot.preis",
+        "Preisangebot.preisangebotsId",
+        "Preisangebot.status",
+        "Bewertung.bewertungsId"
       ]
     },
     {
       "name": "UpdatePreisangebot",
       "nanoentitiesRead": [
-        "kunde.kundenId",
-        "geraet.geraeteId",
-        "geraet.typ",
-        "geraet.istZustand"
+        "Kunde.kundenId",
+        "Geraet.geraeteId",
+        "Geraet.istZustand"
       ],
       "nanoentitiesWritten": [
-        "preisangebot.preis",
-        "preisangebot.status",
-        "bewertung.bewertungsId",
-        "bewertung.bewertung"
+        "Preisangebot.preis",
+        "Preisangebot.status"
       ]
     },
     {
       "name": "AcceptPreisangebot",
       "nanoentitiesRead": [
-        "kunde.kundenId",
-        "geraet.geraeteId",
-        "preisangebot.preisangebotsId"
+        "Kunde.kundenId",
+        "Geraet.geraeteId",
+        "Preisangebot.preisangebotsId"
       ],
       "nanoentitiesWritten": [
-        "geraet.eigentuemer",
-        "preisangebot.status",
-        "rechnung.rechnungsId",
-        "rechnung.betrag",
-        "rechnung.datum"
+        "Geraet.eigentuemer",
+        "Preisangebot.status",
+        "Rechnung.rechnungsId",
+        "Rechnung.betrag",
+        "Rechnung.datum"
       ]
     },
     {
       "name": "DeclinePreisangebot",
       "nanoentitiesRead": [
-        "kunde.kundenId",
-        "geraet.geraeteId",
-        "preisangebot.preisangebotsId"
+        "Kunde.kundenId",
+        "Geraet.geraeteId",
+        "Preisangebot.preisangebotsId"
       ],
       "nanoentitiesWritten": [
-        "preisangebot.status"
+        "Preisangebot.status"
       ]
     },
     {
@@ -83,66 +79,17 @@
       "nanoentitiesRead": [
       ],
       "nanoentitiesWritten": [
-        "geraetetyp.name",
-        "geraetetyp.bewertungskriterien"
+        "Geraetetyp.name",
+        "Geraetetyp.bewertungskriterien"
       ]
     }
   ],
   "sharedOwnerGroups": [],
-  "compatibilities": {
-    "contentVolatility":
-			[
-				{
-					"characteristic":"Often",
-					"nanoentities":[]
-					
-				},
-				{
-					"characteristic":"Rarely",
-					"nanoentities":[]
-				}
-			],
+  "compatibilities":
+	{
+		"contentVolatility": 
+			[],
 		"structuralVolatility":
-			[	
-				{
-					"characteristic":"Often",
-					"nanoentities":[]
-				}
-			],
-		"availabilityCriticality":
-			[
-				{
-					"characteristic":"Low",
-					"nanoentities":[]
-				}
-			],
-		"consistencyCriticality":
-			[
-				{
-					"characteristic":"Eventually",
-					"nanoentities":[]
-				}
-			],
-		"storageSimilarity":
-			[
-				{
-					"characteristic":"Huge",
-					"nanoentities":[]
-					
-				}
-			],
-		"securityCriticality": 
-			[
-				{
-					"characteristic":"Public",
-					"nanoentities":[]
-				},
-				{
-					"characteristic":"Critical",
-					"nanoentities":[]
-					
-				}
-			]
-    
+			[]
   }
 }
